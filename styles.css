@@ -118,7 +118,8 @@ a.hyperlink:hover {
 }
 .standing_item
 {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 2%;
     border-radius: 5px;
     outline-width: 4px;
@@ -133,7 +134,8 @@ a.hyperlink:hover {
 }
 .standing_item_noTransform
 {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 2%;
     border-radius: 5px;
     outline-width: 4px;
@@ -148,7 +150,8 @@ a.hyperlink:hover {
 }
 .standing_item_xings
 {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 2%;
     border-radius: 5px;
     outline-width: 5px;
@@ -163,7 +166,8 @@ a.hyperlink:hover {
 }
 .standing_item_gots
 {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 2%;
     border-radius: 5px;
     outline-width: 4px;
@@ -178,7 +182,8 @@ a.hyperlink:hover {
 }
 .standing_item_njuma
 {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 2%;
     border-radius: 5px;
     outline-width: 4px;
@@ -239,7 +244,8 @@ a.hyperlink:hover {
     outline-color:#ffffff;
     padding: 0px;
     transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
-    place-items:center;
+    display: flex;
+    justify-content: center;
 }
 .content {
     width: 56.5%;
