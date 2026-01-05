@@ -131,6 +131,21 @@ a.hyperlink:hover {
     transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
     overflow: auto;
 }
+.standing_item_noTransform
+{
+    justify-items: center;
+    margin: 2%;
+    border-radius: 5px;
+    outline-width: 4px;
+    max-width: 300px;
+    width: 40%;
+    height: 400px;
+    outline-style:solid;
+    outline-color: #ffffff;
+    padding: 20px;
+    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
+    overflow: auto;
+}
 .standing_item_xings
 {
     justify-items: center;
@@ -195,19 +210,19 @@ a.hyperlink:hover {
 }
 .standing_item:hover
 {
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.048) rotate(-1deg);
 }
 .standing_item_xings:hover
 {
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.048) rotate(-1deg);
 }
 .standing_item_gots:hover
 {
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.048) rotate(-1deg);
 }
 .standing_item_njuma:hover
 {
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.048) rotate(-1deg);
 }
 
 
