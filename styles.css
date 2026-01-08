@@ -148,54 +148,6 @@ a.hyperlink:hover {
     transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
     overflow: auto;
 }
-.standing_item_xings
-{
-    display: flex;
-    justify-content: center;
-    margin: 2%;
-    border-radius: 5px;
-    outline-width: 5px;
-    max-width: 300px;
-    width: 40%;
-    height: 400px;
-    outline-style:solid;
-    outline-color: #ffffff;
-    padding: 20px;
-    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
-    overflow: auto;
-}
-.standing_item_gots
-{
-    display: flex;
-    justify-content: center;
-    margin: 2%;
-    border-radius: 5px;
-    outline-width: 4px;
-    max-width: 300px;
-    width: 40%;
-    height: 400px;
-    outline-style:solid;
-    outline-color: #ffffff;
-    padding: 20px;
-    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
-    overflow: auto;
-}
-.standing_item_njuma
-{
-    display: flex;
-    justify-content: center;
-    margin: 2%;
-    border-radius: 5px;
-    outline-width: 4px;
-    max-width: 300px;
-    width: 40%;
-    height: 400px;
-    outline-style:solid;
-    outline-color: #ffffff;
-    padding: 20px;
-    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
-    overflow: auto;
-}
 .standing_item_header
 {
   color: rgb(0, 0, 0);
