@@ -1,0 +1,317 @@
+body{
+    background: #090909;
+    color: #ffffff;
+    min-height: 100%;
+    overflow-y: auto;
+    font-family: "Space Mono", monospace;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal;
+    margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+    word-break: keep-all;
+    color: white;
+}
+
+h2
+{
+    font-size: 45px;
+    font-style: normal;
+    word-break: keep-all;
+    color: white;
+    position: absolute;
+    z-index: 4;
+    padding: 5px;
+    border-radius: 20px;
+    background:radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.261));
+}
+h1
+{
+    font-size: 400%;
+    font-style: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+h3
+{
+    margin-top:-35px;
+    font-size: 200%;
+    font-style: normal;
+    word-break: keep-all;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+a
+{
+  display: contents;
+  color: #a0f14f
+}
+
+a.hyperlink {
+    display: inline-block;
+    transition: .1s 
+    cubic-bezier(0.77, 2.2, 0.71, 0.5);
+    text-decoration: none;
+    padding: 1px 3px 2px 3px;
+    margin: -1px -3px -2px -3px;
+}
+a.hyperlink:hover {
+    transform: scale(1.2) rotate(-2deg);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    backdrop-filter: blur(1px);
+}
+
+.hyperimage{
+    opacity: 0.8;
+}
+.hyperimage:hover{
+    opacity: 1.0;
+    transform: scale(1.3) rotate(-4deg);
+}
+
+.hyperimage img {
+    transition: transform .1s cubic-bezier(0.77, 2.2, 0.71, 0.5);
+}
+.carousel {
+  overflow: auto;
+  padding: 20px;
+  max-width: 650px;
+  padding-top: 140px;
+	width: 100%;
+  overflow: hidden;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}.wrap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 250px;
+  justify-items: stretch;
+  animation: slide 20s linear infinite;
+  animation-play-state: running;
+}.wrap img {
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}.wrap img:hover {
+  transform: scale(1.1);
+}.wrap:hover {
+  animation-play-state: paused;
+}@keyframes slide {
+  to {
+    translate: calc(-8.75 * 200px);
+  }
+}
+.standing_item
+{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    border-radius: 5px;
+    outline-width: 4px;
+    max-width: 300px;
+    width: 40%;
+    height: 400px;
+    outline-style:solid;
+    outline-color: #ffffff;
+    padding: 20px;
+    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
+    overflow: auto;
+}
+.standing_item_noTransform
+{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    border-radius: 5px;
+    outline-width: 4px;
+    max-width: 300px;
+    width: 40%;
+    height: 400px;
+    outline-style:solid;
+    outline-color: #ffffff;
+    padding: 20px;
+    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
+    overflow: auto;
+}
+.standing_item_header
+{
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  font-size: 24px;
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 20px;
+  width: auto;
+  max-width: fit-content;
+}
+.standing_item_text
+{
+    place-items:left;
+    font-size: 18px;
+    width: 100%;
+}
+.standing_item:hover
+{
+    transform: scale(1.048) rotate(-1deg);
+}
+.standing_item_xings:hover
+{
+    transform: scale(1.048) rotate(-1deg);
+}
+.standing_item_gots:hover
+{
+    transform: scale(1.048) rotate(-1deg);
+}
+.standing_item_njuma:hover
+{
+    transform: scale(1.048) rotate(-1deg);
+}
+
+
+.item
+{
+    margin: 2%;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 700px;
+	  width: 100%;
+	  height: 400px;
+    outline-width: 4px;
+    outline-style:solid;
+    outline-color:#ffffff;
+    padding: 0px;
+    transition: .12s cubic-bezier(0.77, 2.2, 0.71, 0.5);
+    display: flex;
+    justify-content: center;
+}
+.content {
+    width: 56.5%;
+    margin: 0 auto;
+}
+
+.outlined
+{
+    outline-width: 4px;
+    outline-style:ridge;
+    outline-color: white;
+}
+/* Youtube */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+    
+}
+.video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item:hover
+{
+    transform: scale(1.05) rotate(-1deg);
+}
+.video-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: fill;
+  scale: 1;
+  margin: auto;
+  z-index: 2;
+}
+.sidebar {
+    top: -45%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 64%;
+}
+
+.container
+{
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	gap: 2px;
+	inset: 10px;
+}
+.horizontal-container
+{
+  display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:center;
+	gap: 2px;
+	inset: 10px;
+}
+@media (max-width: 1200px)
+{
+  .horizontal-container
+  {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    gap: 2px;
+    inset: 10px;
+  }
+}
+
+/* FONTS */
+.jacquard-12-regular {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.freckle-face-regular {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.slackey-regular {
+  font-family: "Slackey", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.road-rage-regular {
+  font-family: "Road Rage", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
