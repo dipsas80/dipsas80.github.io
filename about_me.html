@@ -15,6 +15,45 @@
         <meta name="viewport" content="width=900">
         <title>Emmy Dev Portfolio</title>
         <link rel="stylesheet" href="styles.css">
+
+        <style>
+        #lang-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 6px;
+            margin: 6px 0;
+            font-size: 14px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #999;
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 2px 4px;
+        }
+        .lang-btn.active {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        </style>
+
+        <script>
+        function setLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerHTML = lang === 'ca' ? el.dataset.ca : el.dataset.en;
+            });
+
+            document.documentElement.lang = lang;
+        }
+        </script>
     </head>
     <body>
         <!-- LOGOTYPE -->
@@ -34,16 +73,34 @@
             <a href="https://www.youtube.com/@emmydev/" target="_blank"><img class="hyperimage" id="youtube" src="images/ytlogo.png" alt="github-link"  style="position: relative; top: -5px; vertical-align:middle" width="50" height="50"></a></h1>
         
         <br></br>
-        <p style="text-align: center; margin-top: -60px; font-size: x-large;">Unity Developer and Programmer</p>
-        <h3 style="text-align: center; margin-top: 0px;">About me</h3>
-        <p style = "font-size: 18px; text-align: center;">When it comes to game dev I'm a mixed bag of programming,<br>game design and basic 3D/2D game art. <br><br> In my free time I like playing guitar, watching anime and <br> participating in the Pizza Jam hosted by <a class="hyperlink" href="https://computerjames.itch.io/" target="blank">Computer James</a>. <br><br>I also run a game company called Frogga Games.</p>
+        <p style="text-align: center; margin-top: -60px; font-size: x-large;"
+   data-en="Unity Developer and Programmer"
+   data-ca="Desenvolupadora i programadora amb Unity">Unity Developer and Programmer</p>
+
+        <h3 style="text-align: center; margin-top: 0px;"
+            data-en="About me"
+            data-ca="Sobre mi">About me</h3>
+
+        <div id="lang-toggle">
+            <button id="lang-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+            <span>/</span>
+            <button id="lang-ca" class="lang-btn" onclick="setLang('ca')">CA</button>
+        </div>
+
+        <p style="font-size: 18px; text-align: center;"
+   data-en="When it comes to game dev I'm a mixed bag of programming,<br>game design and basic 3D/2D game art. <br><br> In my free time I like playing guitar, watching anime and <br> participating in the Pizza Jam hosted by <a class='hyperlink' href='https://computerjames.itch.io/' target='blank'>Computer James</a>. <br><br>I also run a game company called Frogga Games."
+   data-ca="Pel que fa al desenvolupament de videojocs, sóc una barreja de programadora,<br> dissenyadora de jocs, i artista (bàsica) en 3D/2D.<br><br>En el meu temps lliure m'agrada tocar la guitarra, veure anime i <br>participar a la Pizza Jam organitzada per <a class='hyperlink' href='https://computerjames.itch.io/' target='blank'>Computer James</a>. <br><br>També dirigeixo una empresa de videojocs anomenada Frogga Games.">
+    When it comes to game dev I'm a mixed bag of programming,<br>game design and basic 3D/2D game art. <br><br> In my free time I like playing guitar, watching anime and <br> participating in the Pizza Jam hosted by <a class="hyperlink" href="https://computerjames.itch.io/" target="blank">Computer James</a>. <br><br>I also run a game company called Frogga Games.
+</p>
         <!-- Items go here -->
         <div class=horizontal-container>
             <!-- ITEM -->
             <a href ="documents/ResumePortfolioEmmy.pdf" target="_blank">
             <div class=standing_item>
                 <h2
-                    style="background: black; font-size: 24px; margin-top: 15px;">curriculum vitae</h2>
+                    style="background: black; font-size: 24px; margin-top: 15px;"
+                    data-en="curriculum vitae"
+                    data-ca="currículum vitae">curriculum vitae</h2>
                 <div class="video-container">
                     <img src="images/cvimg.png" style="height: 100%; width: 100%; opacity: 60%;;">
                 </div>
@@ -52,7 +109,9 @@
             <!-- ITEM -->
             <a href ="https://github.com/dipsas80/" target="_blank">
             <div class=standing_item>
-                <h2 style="background: black; color: rgb(255, 255, 255); font-size: 24px; margin-top: 15px;">github tracker</h2>
+                <h2 style="background: black; color: rgb(255, 255, 255); font-size: 24px; margin-top: 15px;"
+                    data-en="github tracker"
+                    data-ca="seguiment de github">github tracker</h2>
                 <div class="video-container">
                     <div class="graph-stack">
                         <!--<img src="https://ghchart.rshah.org/dipsas80">-->
@@ -66,6 +125,8 @@
                 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7iI5wsq3F1d3Bs23MrGb06?utm_source=generator&theme=0" max-width="285" width="100%" height="95%" frameBorder="" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
-        <p style="text-align: center; font-size: x-large;">Copyright © 2026 dipsas80. All rights reserved.</p>
+        <p style="text-align: center; font-size: x-large;"
+   data-en="Copyright © 2026 dipsas80. All rights reserved."
+   data-ca="Copyright © 2026 dipsas80. Tots els drets reservats.">Copyright © 2026 dipsas80. All rights reserved.</p>
     </body>
 </html>

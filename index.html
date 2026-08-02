@@ -17,6 +17,69 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <!-- Add this right after <body> opens -->
+<div id="lang-switcher-bar">
+    <div id="lang-toggle">
+        <button id="lang-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <span>/</span>
+        <button id="lang-ca" class="lang-btn" onclick="setLang('ca')">CA</button>
+    </div>
+    <p id="lang-banner" class="lang-text"
+       data-en="This site is partly provided in Catalan to adhere to the .cat cultural requirements. I appreciate Catalan culture and I really like cats, so this was the perfect domain."
+       data-ca="Aquest lloc es proporciona parcialment en català per complir els requisits culturals del domini .cat. Aprecio la cultura catalana i m'agraden molt els gats (cats), així que era el domini perfecte.">
+        This site is provided in Catalan to adhere to the .cat cultural requirements. I appreciate Catalan culture and I really like cats, so this was the perfect domain.
+    </p>
+</div>
+
+<style>
+#lang-switcher-bar {
+    text-align: center;
+    padding: 10px 20px 0;
+    font-family: 'Space Mono', monospace;
+}
+#lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.lang-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+.lang-btn.active {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.lang-text {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.4;
+}
+</style>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = lang === 'ca' ? el.dataset.ca : el.dataset.en;
+    });
+
+    document.documentElement.lang = lang;
+}
+</script>
          <!-- LOGOTYPE -->
         <div style="text-align:center; padding-top: 30px; margin-bottom: -10px;">
             <a href="./index.html">
@@ -35,7 +98,9 @@
         
         <br></br>
 
-        <p style="text-align: center; margin-top: -60px; font-size: x-large;">Unity Developer and Programmer</p>
+        <p style="text-align: center; margin-top: -60px; font-size: x-large;"
+   data-en="Unity Developer and Programmer"
+   data-ca="Desenvolupadora i programadora amb Unity">Unity Developer and Programmer</p>
         <!-- Items go here -->
         <div class=container>
             <!-- ITEM -->
