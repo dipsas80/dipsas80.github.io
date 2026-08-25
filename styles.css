@@ -30,6 +30,29 @@ h2
     border-radius: 20px;
     background:radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.261));
 }
+.itch-outer {
+    width: 300px;
+    height: 90.7px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;   /* not absolute anymore */
+    margin: 0 auto;       /* just centers horizontally */
+}
+.itch-inner {
+    width: 552px;
+    height: 167px;
+    transform: scale(0.543);
+    transform-origin: top left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.itch-inner iframe {
+    width: 552px;
+    height: 167px;
+    border: none;
+    display: block;
+}
 h1
 {
     font-size: 400%;
